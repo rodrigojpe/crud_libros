@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1 th:text="${resultado}"></h1>
+	<h1>Creando Libro</h1>
+	
+	<h1 th:text="${libro.titulo}"></h1>
+	<form th:action="@{/edit}"   th:object="${libro}"    method="post">
+		
+		
+		<div>
+			<label for="id">Identificador</label>
+		</div>
+		<div>
+			<input name="id" id="id" type="text" th:value="${libro.id}"  readonly="readonly">
+		</div> 
+		<div>
+			<label for="titulo">Titulo</label>
+		</div>
+		<div>
+			<input name="titulo" id="titulo" type="text" th:value="${libro.titulo}">
+		</div> 
+	
+		<div>
+			<label for="user">Descripcion</label>
+		</div>
+
+		<div>
+			<input name="descripcion" id="descripcion" type="text" th:value="${libro.descripcion}">
+		</div>		
+		<div>
+			<label for="anno">Año</label>
+		</div>
+		<div>
+			<input name="anno" id="anno" type="text" th:value="${libro.anno}">
+		</div>		
+		<div>
+			<label for="isbn">Isbn</label>
+		</div>
+		<div>
+			<input name="isbn" id="isbn" type="text" th:value="${libro.isbn}">
+		</div>
+		
+		<div>
+			<label for="numeroPaginas">Número de Paginas</label>
+		</div>
+		<div>
+			<input   name="numeroPaginas" id="numeroPaginas" type="number" th:value="${libro.numeroPaginas}">
+		</div>
+		
+		<br>
+		<div>
+			<input type="submit" value="Enviar" > 
+		</div>
+	</form> 
+	
+	
+	
+</body>
+</html>
