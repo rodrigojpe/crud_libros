@@ -131,6 +131,7 @@ public class IndexController {
 		
 		
 		libroService.aditarLibro(libro);
+		System.out.println(libro);
 		
 		return "index";
 		
